@@ -8,7 +8,7 @@ body
     font-family: 'Montserrat', sans-serif;
 }  
 hr{
-    margin: 2rem 0rem;
+    margin: 2rem 0rem;          
 } 
 /** container **/
 .container{
@@ -22,7 +22,7 @@ hr{
 /** links **/
 .link{
     text-decoration: none;
-    padding:1rem,1rem;
+    padding:1rem 1rem;
 }
 .primary-link{
     background-color: var(--primary-color);
@@ -34,4 +34,12 @@ hr{
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
 
+}
+/** lists **/
+.list-non-bullet{
+    list-style: none ;
+}
+.list-item-inline{
+    display: inline;
+    padding: 0rem 0.5rem;
 }
