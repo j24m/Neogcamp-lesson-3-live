@@ -3,6 +3,7 @@
     --primary-color: #6B7280;
     --light-gray: #E5E7EB;
     --dark-gray: #374151;
+    --yellow-color: #D97706;
 }
 
 body
@@ -108,6 +109,56 @@ hr{
     font-weight: bold;
     font-size: large;
 }
+.blog-heading{
+  color:var(--dark-gray);
+  text-indent: 0.5rem;
+  font-weight: bolder;
+  font-size: x-large;
+  }
+.blog-intro{
+    color: var(--primary-color);
+    font-size: small;
+    margin-left: 0.5rem;
+    text-align: left;
+}
+.xml-method{
+    font-size:larger;
+    color: var(--dark-gray);
+    text-decoration: underline;
+    text-indent: 0.5rem;
+}
+.method-intro{
+    font-size: small;
+    margin:0.5rem;
+    color:var(--primary-color);
+    font-weight:unset;
+    text-align: left;
+    
+}
+.xml-syntax{
+    background-color: var(--light-gray);
+    padding: 1rem;
+    color: black; 
+}
+.methods{
+    color: var(--yellow-color);
+    font-size: large;
+    text-decoration: underline;
+    text-indent: 0.5rem;
+}
+.sub-method{
+    color: var(--yellow-color);
+    font-size: medium;
+    text-indent: 0.5rem;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 
 
