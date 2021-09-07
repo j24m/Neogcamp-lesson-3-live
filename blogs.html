@@ -27,92 +27,52 @@
     <header class="hero">
         <h1 class="reactlogo-heading">My <span class="heading-inverted">Blogs</span> </h1>
     </header>
-    <h2 class="blog-heading"> HTTP Requests in JavaScript </h2>
-    <div class="blog-intro">
-        Making requests is the heart of the Internet. Whenever you are browsing the internet, all what you are doing is
-        requesting information from servers, which are basically interconnected computers. It's the foundation of how
-        websites work. A simple case is a person typing "www.google.com" and getting the Google search page. A request
-        is made to a web server which then sends back the files for that page which will be rendered in the browser as a
-        web page. This is made possible by a protocol known as HTTP (HyperText Transfer Protocol). On the Mozilla
-        Developer Network website, the HTTP protocol is described as:
 
-        HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any
-        data exchange on the Web and it is a client-server protocol, which means requests are initiated by the
-        recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents
-        fetched, for instance text, layout description, images, videos, scripts, and more.
+    <p>Welcome to my blog page. Without further delay checkout my blogs and stay tuned for more blogs.</p>
 
-        A couple of commonly used ways to make requests are XMLHttpRequest and Fetch.
-    </div>
+    <h3>DNS (Domain Name Server)</h3>
+    <p>
+        <ul>
+            <li>In the world of networking, computers don't go by names like humans do , they go by numbers.</li>
+            <li>The reason they go by numbers is because computers only and only understand numbers , so they will be
+                able to talk to each other and identify each other via numbers.</li>
+            <li>These numbers are called <strong>ip addresses</strong></li>
+            <li>Now... In order for it to be possible to establish communication between humans and computers while also
+                making the communication easier, networking engineers developed DNS.</li>
+            <li><strong>DNS</strong> stands for <strong>Domain Name Server</strong> and it gives names to numbers or
+                more specifically it gives <strong>domain names to ip addresses</strong></li>
+            <li>So if you type in a web address in your web browser, DNS will resolve the name to a number, because the
+                only thing a computer understands are numbers.</li>
+            <p>Read in detail about DNS by clicking below.</p>
+            <a class="link secondary-link" href="/dns.html">Read More</a>
+        </ul><hr>
+    </p>
+    <h3>USB (Universal Serial Bus)</h3>
+    <p>
+        <ul>
+            <li>It is the standard that is used to connect peripherals to a computer.</li>
+            <li>It is the most commonly used port.</li>
+            <li>Used to connect many different devices suc has keyboards, mice, cameras, printers, scanners, flash drives, external hard drives.</li>
+            <li>They can even do networking.</li>
+            <li>It is also used to charge cell phones.</li>
 
-    <h1 class="xml-method">1. XMLHttpRequest (XHR)</h1>
-    <h3 class="method-intro">AJAX stands for Asynchronous JavaScript And XML. Requests made are asynchronous which means
-        they don't interrupt
-        the execution of other JavaScript code. In other words, JavaScript code besides the AJAX code doesn't have to
-        wait for requests to finish being executed. It can execute simultaneously. The method that makes this possible
-        is the XMLHttpRequest(). The prefix 'XML' doesn't determine the type of data we can receive from this type of
-        request. We can receive any form of data.
+            <p>Read in detail about USBs by clicking below.</p>
+            <a class="link secondary-link" href="/usb.html">Read More</a>
+        </ul>
+    </p>
 
-        The XMLHttpRequest() method works as a constructor for us to create an instance and call our AJAX requests on.
-    </h3>
-    <div class="xml-syntax">
-        const xhr = new XMLHttpRequest();
-    </div>
 
-    <h1 class="methods">Methods</h1>
-    <h2 class="sub-method">a. xhr.open()</h2>
-    <p class="method-intro">We can then use the open() method on our xhr object to initialize or configure a request. This method takes:
 
-        Method: GET, POST, PUT or DELETE,
-        URL: Path to our resource,
-        Async: Boolean value (true or false); Optional & default value is true,
-        Username & Password — Optional; Credentials if authentication is needed.</p>
-    <div class="xml-syntax">
-        xhr.open(Method, URL[, Async]);
-    </div>
-    <h2 class="sub-method">b. xhr.send()</h2>
-    <div class="xml-syntax">
-        xhr.send([body]);
-    </div>
-    <h1 class="xml-method">2. Fetch</h1>
-    <h3 class="method-intro">Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in
-        details how the fetch() API works here. But let's redo the previous requests using fetch and see the difference.
-    </h3>
-    <h2 class="sub-method">a. Method: GET</h2>
-    <div class="xml-syntax">
-        let resURL = "https://jsonplaceholder.typicode.com/posts";
 
-        fetch(resURL)
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error));
-    </div>
-    <h2 class="sub-method">b. Method: POST</h2>
-    <div class="xml-syntax">
-        fetch(resURL, {
-        method: 'POST',
-        body: JSON.stringify({
-        title: 'this is title',
-        body: 'this is body',
-        userId: 1
-        }),
-        headers: {
-        "Content-type": "application/json"
-        }
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error));
-    </div>
-    <h2>Stay tuned for more blogs...</h2>
-
-<footer class="footer">
+    <footer class="footer">
         <div class="footer-header">Social media handles</div>
         <ul class="social-links list-non-bullet">
-            <li class="list-item-inline"> <a class="link" href="https://github.com/j24m">Github</a> 
+            <li class="list-item-inline"> <a class="link" href="https://github.com/j24m">Github</a>
             </li>
-            <li class="list-item-inline"> <a class="link" href="https://www.instagram.com/_jyotsnamehta_/">Instagram</a> 
+            <li class="list-item-inline"> <a class="link" href="https://www.instagram.com/_jyotsnamehta_/">Instagram</a>
             </li>
-            <li class="list-item-inline"><a class=link href="https://www.linkedin.com/in/jyotsna-mehta-795846215">Linkedin</a>
+            <li class="list-item-inline"><a class=link
+                    href="https://www.linkedin.com/in/jyotsna-mehta-795846215">Linkedin</a>
             </li>
         </ul>
     </footer>

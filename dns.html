@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Name Server</title>
+    <link href="dns.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="main-heading">Domain Name System</h1>
+    <h2 class="sub-heading">Introduction:-</h2>
+    <p>
+        <ul>
+            <li>
+                You type in the name of a website say <strong>Yahoo.com</strong> in your web browser.
+            </li>
+            <li>This name that you enter is the domain name of the website</li>
+            <li>What you could have done is type in the <strong>Ip address</strong> of this website which is <strong>74.125.44.25</strong></li>
+            <li>But there are <strong>millions</strong> of websites and you cannot possibly remember the Ip address for each of them and therefore a domain name is provided for the same.</li>
+            <li>So you simply type in the domain name & let DNS convert it into its Ip address for you.</li>
+            <img class="dns-intro" src="images/dnsintro.png"/>
+            <li>As soon as you type yahoo.com on your web browser The DNS server will search through its database to find a matching ip address for that domain name.</li>
+            <li>When it finds it , it will resolve the domain name to the ip address of the website and once this process is done your computer will be able to communicate with the yahoo web server and retrieve web pages.</li>
+        </ul>
+    </p>
+    <h2 class="sub-heading">Step by step explaination of inside working of DNS</h2>
+    <p>
+        <ul>
+            <li>
+             After you type <strong>Yahoo.com</strong> in your web browser, <strong>there are two possibilities:-</strong>   
+            </li>
+            <ol>
+                <li>Your <strong>browser</strong>  or <strong>operating system</strong> will find out the ip address for yahoo.com in its <strong>cache memory.</strong></li>
+                <img class="dns-intro" src="images/searching.png"/>
+                <li>It<strong> won't</strong> find out the the ip address for yahoo.com in its cache memory in which case go to the next step.</li>
+                <img class="dns-intro" src="images/ipnotfound.png"/>
+            </ol>
+            <li>In case the ip address is not found in the cache memory, your computer will send query <strong>(No ip address found)</strong> to the next level which is called the resolver server. <strong> The resolver server is basically your internet service provider.</strong></li>
+            <img class="dns-intro" src="images/resolver.png"/>
+            <li>When resolver server receives the query, it will <strong>check</strong> its own <strong>cache memory</strong> to find the ip address of yahoo.com, and if it doesn't find out the ip address it will send the query to the next level which is the <strong>root server.</strong></li>
+            <img class="dns-intro" src="images/notfoundinresolver.png"/>
+            <li>When the root server receives the query, it's <strong>not going to know</strong> the ip address for yahoo.com but it knows where to send the resolver to help it find out the ip address.</li>
+            <img class="dns-intro" src="images/rootserver.png"/>
+            <img class="dns-intro" src="images/notfoundinroot.png"/>
+            <li>So, the root server directs the resolver to something called <strong>TLD server(Top level domain server)</strong></li>
+            <img class="dns-intro" src="images/tld.png"/>
+            <li> <strong>Top Level Domain server:-</strong> </li>
+            <li>TLD server stores the address information of <strong> top level domains: (.com, .org, .net )</strong></li>
+            <li>The TLD server which has .com as top level domain is the one of which yahoo.com is a part of. </li>
+            <li>Now.. when the TLD server will receive the query, <strong>it won't know the ip address</strong> of yahoo.com, it will again direct the resolver to to the <strong>final level</strong> which is <strong>ANS (Authoritative Name Server)</strong></li>
+            <img class="dns-intro" src="images/notfoundintld.png"/>
+            <img class="dns-intro" src="images/directtoans.png"/>
+            <li><strong>ANS:-</strong></li>
+            <li>ANS is responsible for knowing everything about the domain which includes the ip address.</li>
+            <li>So when ANS receives the query from the resolver it will <strong>respond with the ip address for yahoo.com.</strong></li>
+            <img class="dns-intro" src="images/ans.png"/>
+            <li><strong>Finally</strong> the resolver will get the ip address for yahoo.com and it will <strong >store it in its cache memory so that it doesn't have to repeat the above process again if it receives another query for yahoo.com.</strong></li>
+            <li>The resolver will tell your computer the ip address for yahoo.com and <strong>your computer can now communicate with yahoo website and retrieve web pages.</strong></li>
+            <img class="dns-intro" src="images/storeipinresolver.png"/>
+        </ul>
+    </p>
+    <footer class="footer">
+        <div class="footer-header">Social media handles</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline"> <a class="link" href="https://github.com/j24m">Github</a>
+            </li>
+            <li class="list-item-inline"> <a class="link" href="https://www.instagram.com/_jyotsnamehta_/">Instagram</a>
+            </li>
+            <li class="list-item-inline"><a class=link
+                    href="https://www.linkedin.com/in/jyotsna-mehta-795846215">Linkedin</a>
+            </li>
+        </ul>
+    </footer>
+    
+    
+
+
+</body>
+
+</html>
